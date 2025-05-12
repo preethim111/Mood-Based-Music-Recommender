@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block title %}MoodTunes - Personalized Recommendations{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1>MoodTunes</h1>
+    <p class="lead">AI-powered music recommendations based on your mood, preferences, and feedback</p>
+</div>
+
+{% if loading.is_loading %}
+<div class="card">
+    <div class="card-body text-center">
+        <h3>System Initializing</h3>
+        <p>{{ loading.status }}</p>
+        <div class="progress mb-3">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                 role="progressbar" 
+                 style="width: {{ loading.progress }}%" 
+                 aria-valuenow="{{ loading.progress }}" 
+                 aria-valuemin="0" 
+                 aria-valuemax="100">
+                {{ loading.progress }}%
+            </div>
+        </div>
+        <p>Please wait while we load the recommendation system...</p>
+    </div>
+</div>
+{% else %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="card-title">How It Works</h2>
+                <p class="card-text">
+                    MoodTunes uses advanced AI to understand your musical preferences. 
+                    Just tell us how you're feeling or what you're doing, and we'll create 
+                    the perfect playlist for you.
+                </p>
+                <h5>Features:</h5>
+                <ul>
+                    <li>Natural language understanding of your preferences</li>
+                    <li>Cross-genre recommendations based on mood</li>
+                    <li>Learns from your feedback to get better over time</li>
+                    <li>Creates personalized playlists that match your unique taste</li>
+                </ul>
+                
+                {% if not user_id %}
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-sign-in-alt me-2"></i>Get Started
+                    </a>
+                </div>
+                {% else %}
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('new_recommendations') }}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-music me-2"></i>Get Recommendations
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h2 class="card-title">How To Use</h2>
+                <div class="mb-4">
+                    <h5><i class="fas fa-edit me-2"></i>1. Tell us how you feel</h5>
+                    <p>Describe your mood, activity, or preferences in natural language.</p>
+                </div>
+                
+                <div class="mb-4">
+                    <h5><i class="fas fa-headphones me-2"></i>2. Explore recommendations</h5>
+                    <p>Listen to personalized song recommendations tailored to your input.</p>
+                </div>
+                
+                <div class="mb-4">
+                    <h5><i class="fas fa-star me-2"></i>3. Provide feedback</h5>
+                    <p>Rate songs to help the system learn your preferences.</p>
+                </div>
+                
+                <div>
+                    <h5><i class="fas fa-magic me-2"></i>4. Get your perfect playlist</h5>
+                    <p>The system creates a customized playlist that gets better the more you use it.</p>
+                </div>
+                
+                {% if user_id %}
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('dashboard') }}" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-columns me-2"></i>Go to Dashboard
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Check loading status periodically if system is initializing
+    {% if loading.is_loading %}
+    function checkStatus() {
+        fetch('/api/status')
+            .then(response => response.json())
+            .then(data => {
+                if (!data.is_loading) {
+                    // Reload the page when loading is complete
+                    window.location.reload();
+                } else {
+                    // Update the loading status
+                    document.querySelector('.progress-bar').style.width = data.progress + '%';
+                    document.querySelector('.progress-bar').setAttribute('aria-valuenow', data.progress);
+                    document.querySelector('.progress-bar').textContent = data.progress + '%';
+                    document.querySelector('p').textContent = data.status;
+                    
+                    // Check again in 2 seconds
+                    setTimeout(checkStatus, 2000);
+                }
+            });
+    }
+    
+    // Start checking status
+    setTimeout(checkStatus, 2000);
+    {% endif %}
+</script>
+{% endblock %}

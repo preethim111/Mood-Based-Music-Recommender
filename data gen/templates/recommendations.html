@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}MoodTunes - Your Recommendations{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1>Your Recommendations</h1>
+    <p class="lead">Rate songs to improve future recommendations</p>
+</div>
+
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2>We found {{ recommendations|length }} songs for you</h2>
+            <div>
+                <a href="{{ url_for('new_recommendations') }}" class="btn btn-outline-primary">
+                    <i class="fas fa-sync-alt me-2"></i>New Recommendations
+                </a>
+                <a href="{{ url_for('final_playlist') }}" class="btn btn-primary ms-2">
+                    <i class="fas fa-list me-2"></i>Generate My Playlist
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    {% for video in recommendations %}
+    <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+            <div class="video-container">
+                <div class="recommendation-method">
+                    {% if video.recommendation_method == 'text' %}
+                    <i class="fas fa-comment me-1"></i> From Your Text
+                    {% elif video.recommendation_method == 'mood' %}
+                    <i class="fas fa-smile me-1"></i> Mood Match
+                    {% elif video.recommendation_method == 'genre_mix' %}
+                    <i class="fas fa-music me-1"></i> Genre Mix
+                    {% elif video.recommendation_method == 'popular' %}
+                    <i class="fas fa-fire me-1"></i> Popular
+                    {% else %}
+                    <i class="fas fa-random me-1"></i> Discover
+                    {% endif %}
+                </div>
+                <iframe src="{{ video.embed_url }}" title="{{ video.title }}"
+                        frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title text-truncate" title="{{ video.title }}">
+                    {{ video.title }}
+                </h5>
+                <p class="card-text text-muted">{{ video.artist }}</p>
+                <div class="d-grid">
+                    <a href="{{ url_for('feedback', video_id=video.video_id) }}" class="btn btn-primary">
+                        <i class="fas fa-star me-2"></i>Rate This Song
+                    </a>
+                </div>
+            </div>
+            <div class="card-footer text-muted d-flex justify-content-between align-items-center">
+                <small>
+                    <i class="fas fa-tag me-1"></i> {{ video.genre }}
+                </small>
+                <small>
+                    <i class="fas fa-eye me-1"></i> {{ '{:,}'.format(video.views) }}
+                </small>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

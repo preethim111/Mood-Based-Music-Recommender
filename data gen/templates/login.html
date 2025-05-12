@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}MoodTunes - Login{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h3 class="mb-0">Welcome to MoodTunes</h3>
+            </div>
+            <div class="card-body">
+                {% if error %}
+                <div class="alert alert-danger">{{ error }}</div>
+                {% endif %}
+                
+                <ul class="nav nav-tabs" id="loginTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="new-user-tab" data-bs-toggle="tab" 
+                                data-bs-target="#new-user" type="button" role="tab" 
+                                aria-controls="new-user" aria-selected="true">
+                            New User
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="existing-user-tab" data-bs-toggle="tab" 
+                                data-bs-target="#existing-user" type="button" role="tab" 
+                                aria-controls="existing-user" aria-selected="false">
+                            Existing User
+                        </button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content mt-3" id="loginTabsContent">
+                    <div class="tab-pane fade show active" id="new-user" role="tabpanel" 
+                         aria-labelledby="new-user-tab">
+                        <form method="post" action="{{ url_for('login') }}">
+                            <input type="hidden" name="action" value="new_user">
+                            
+                            <div class="mb-3">
+                                <label for="user_name" class="form-label">Your Name (Optional)</label>
+                                <input type="text" class="form-control" id="user_name" name="user_name" 
+                                       placeholder="Enter your name">
+                                <div class="form-text">
+                                    A unique user ID will be generated for you automatically.
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-user-plus me-2"></i>Create New User
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="existing-user" role="tabpanel" 
+                         aria-labelledby="existing-user-tab">
+                        <form method="post" action="{{ url_for('login') }}">
+                            <input type="hidden" name="action" value="login">
+                            
+                            <div class="mb-3">
+                                <label for="user_id" class="form-label">User ID</label>
+                                <input type="text" class="form-control" id="user_id" name="user_id" 
+                                       placeholder="Enter your user ID" required>
+                                <div class="form-text">
+                                    Enter the user ID that was provided to you previously.
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-sign-in-alt me-2"></i>Login
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

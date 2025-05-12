@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}MoodTunes - Your Personalized Playlist{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1>{{ playlist.name }}</h1>
+    <p class="lead">{{ playlist.description }}</p>
+</div>
+
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h4 class="mb-1">{{ playlist.size }} songs</h4>
+                        <p class="text-muted mb-0">
+                            <i class="fas fa-calendar-alt me-1"></i>Created {{ playlist.created_at|format_date }}
+                        </p>
+                    </div>
+                    <div>
+                        <a href="{{ url_for('new_recommendations') }}" class="btn btn-outline-primary">
+                            <i class="fas fa-magic me-2"></i>Get New Recommendations
+                        </a>
+                    </div>
+                </div>
+                
+                {% if playlist.genre_distribution %}
+                <div class="mt-4">
+                    <h5>Genre Distribution</h5>
+                    <div class="row">
+                        {% for genre, percentage in playlist.genre_distribution.items() %}
+                        <div class="col-md-4 col-sm-6 mb-2">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>{{ genre }}</span>
+                                <span>{{ (percentage * 100)|int }}%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar" role="progressbar" 
+                                     style="width: {{ (percentage * 100)|int }}%"></div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    {% for track in playlist.tracks %}
+    <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+            <div class="video-container">
+                <iframe src="{{ track.embed_url }}" title="{{ track.title }}"
+                        frameborder="0" allowfullscreen></iframe>
+                {% if 'user_rating' in track %}
+                <div class="recommendation-method">
+                    <i class="fas fa-star me-1 text-warning"></i> Rated {{ track.user_rating }}/5
+                </div>
+                {% endif %}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title text-truncate" title="{{ track.title }}">
+                    {{ track.title }}
+                </h5>
+                <p class="card-text text-muted">{{ track.artist }}</p>
+                <a href="{{ track.youtube_url }}" target="_blank" class="btn btn-sm btn-outline-primary w-100">
+                    <i class="fab fa-youtube me-1"></i> Watch on YouTube
+                </a>
+            </div>
+            <div class="card-footer text-muted d-flex justify-content-between align-items-center">
+                <small>
+                    <i class="fas fa-tag me-1"></i> {{ track.genre }}
+                </small>
+                <small>
+                    <i class="fas fa-eye me-1"></i> {{ '{:,}'.format(track.views) }}
+                </small>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

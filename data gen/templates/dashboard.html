@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+
+{% block title %}MoodTunes - Dashboard{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1>Your Music Dashboard</h1>
+    <p class="lead">Welcome back, {{ user_name }}</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <h3 class="card-title">
+                    <i class="fas fa-headphones-alt fa-2x d-block mb-2 text-primary"></i>
+                    {{ stats.recommendation_count }}
+                </h3>
+                <p class="card-text text-muted">Songs Recommended</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <h3 class="card-title">
+                    <i class="fas fa-star fa-2x d-block mb-2 text-warning"></i>
+                    {{ stats.feedback_count }}
+                </h3>
+                <p class="card-text text-muted">Ratings Provided</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <h3 class="card-title">
+                    <i class="fas fa-music fa-2x d-block mb-2 text-success"></i>
+                    {{ stats.high_rated_count }}
+                </h3>
+                <p class="card-text text-muted">Favorite Songs</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h4 class="mb-0">Your Music Taste</h4>
+            </div>
+            <div class="card-body">
+                {% if stats.top_genres %}
+                <h5>Top Genres You Like</h5>
+                <div class="mb-4">
+                    {% for genre, score in stats.top_genres %}
+                    <div class="mb-2">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>{{ genre }}</span>
+                            <span>{{ (score * 20)|int }}%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar" role="progressbar" 
+                                 style="width: {{ (score * 20)|int }}%"></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p class="text-muted">Listen to more music to see your genre preferences.</p>
+                {% endif %}
+                
+                {% if stats.top_moods %}
+                <h5 class="mt-4">Your Mood Preferences</h5>
+                <div class="d-flex flex-wrap">
+                    {% for mood, score in stats.top_moods %}
+                    <div class="bg-light rounded-pill px-3 py-1 me-2 mb-2">
+                        {{ mood }} <span class="badge bg-primary ms-1">{{ (score * 20)|int }}%</span>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
+                {% if stats.top_artists %}
+                <h5 class="mt-4">Artists You Like</h5>
+                <ul class="list-group">
+                    {% for artist, score in stats.top_artists %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{ artist }}
+                        <span class="badge bg-primary rounded-pill">{{ (score * 20)|int }}%</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header bg-dark text-white">
+                <h4 class="mb-0">Quick Actions</h4>
+            </div>
+            <div class="card-body">
+                <div class="d-grid gap-3">
+                    <a href="{{ url_for('new_recommendations') }}" class="btn btn-lg btn-primary">
+                        <i class="fas fa-magic me-2"></i>Get New Recommendations
+                    </a>
+                    <a href="{{ url_for('final_playlist') }}" class="btn btn-lg btn-outline-primary">
+                        <i class="fas fa-list me-2"></i>View Your Personalized Playlist
+                    </a>
+                    <a href="#" class="btn btn-lg btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#userIdModal">
+                        <i class="fas fa-id-card me-2"></i>View Your User ID
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        {% if stats.session_count > 0 %}
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h4 class="mb-0">System Insights</h4>
+            </div>
+            <div class="card-body">
+                <p>
+                    <i class="fas fa-brain text-primary me-2"></i>
+                    The recommendation system is learning your preferences based on 
+                    {{ stats.feedback_count }} ratings across {{ stats.session_count }} sessions.
+                </p>
+                
+                {% if stats.average_rating > 0 %}
+                <p>
+                    <i class="fas fa-chart-line text-success me-2"></i>
+                    Your average rating is {{ "%.1f"|format(stats.average_rating) }}/5, which helps 
+                    the system find music you'll love.
+                </p>
+                {% endif %}
+                
+                <p>
+                    <i class="fas fa-lightbulb text-warning me-2"></i>
+                    Tip: Rate more songs to improve your recommendations!
+                </p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- User ID Modal -->
+<div class="modal fade" id="userIdModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Your User ID</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Keep your User ID to login again in the future:</p>
+                <div class="alert alert-info">
+                    <span id="userId">{{ user_id }}</span>
+                    <button class="btn btn-sm btn-outline-primary float-end" onclick="copyUserId()">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function copyUserId() {
+        const userId = document.getElementById('userId').textContent;
+        navigator.clipboard.writeText(userId).then(() => {
+            alert('User ID copied to clipboard!');
+        });
+    }
+</script>
+{% endblock %}

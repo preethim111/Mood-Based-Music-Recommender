@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block title %}MoodTunes - Rate This Song{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1>Rate This Song</h1>
+    <p class="lead">Your feedback helps us improve your recommendations</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="video-container mb-3">
+                    <iframe src="{{ video.embed_url }}" title="{{ video.title }}"
+                            frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h4 class="card-title">{{ video.title }}</h4>
+                <p class="card-text text-muted">{{ video.artist }}</p>
+                
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="badge bg-primary">{{ video.genre }}</span>
+                    <span class="text-muted">
+                        <i class="fas fa-eye me-1"></i>{{ '{:,}'.format(video.views) }} views
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h4 class="mb-0">Your Rating</h4>
+            </div>
+            <div class="card-body">
+                <form method="post" action="{{ url_for('feedback', video_id=video.video_id) }}"
+                      id="feedbackForm">
+                      
+                    <div class="form-group mb-4">
+                        <label for="rating" class="form-label">{{ form.fields[0].label }}</label>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" required />
+                            <label for="star5" title="5 stars"><i class="fas fa-star"></i></label>
+                            
+                            <input type="radio" id="star4" name="rating" value="4" />
+                            <label for="star4" title="4 stars"><i class="fas fa-star"></i></label>
+                            
+                            <input type="radio" id="star3" name="rating" value="3" />
+                            <label for="star3" title="3 stars"><i class="fas fa-star"></i></label>
+                            
+                            <input type="radio" id="star2" name="rating" value="2" />
+                            <label for="star2" title="2 stars"><i class="fas fa-star"></i></label>
+                            
+                            <input type="radio" id="star1" name="rating" value="1" />
+                            <label for="star1" title="1 star"><i class="fas fa-star"></i></label>
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" id="listen_duration" name="listen_duration" value="0" />
+                    
+                    <div class="form-group mb-4">
+                        <label for="skip_reason" class="form-label">{{ form.fields[2].label }}</label>
+                        <select class="form-select" id="skip_reason" name="skip_reason">
+                            {% for option in form.fields[2].options %}
+                            <option value="{{ option }}" {% if form.fields[2].default == option %}selected{% endif %}>
+                                {{ option }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <div class="form-group mb-4">
+                        <label for="comments" class="form-label">{{ form.fields[3].label }}</label>
+                        <textarea class="form-control" id="comments" name="comments" rows="3"
+                                 placeholder="{{ form.fields[3].placeholder }}"></textarea>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane me-2"></i>Submit Rating
+                        </button>
+                        <a href="{{ url_for('view_recommendations') }}" class="btn btn-outline-secondary">
+                            <i class="fas fa-arrow-left me-2"></i>Back to Recommendations
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Track how long the user listens to the song
+    let startTime = Date.now();
+    let isPlaying = true;
+    
+    // Update the listen duration on form submit
+    document.getElementById('feedbackForm').addEventListener('submit', function() {
+        const duration = isPlaying ? (Date.now() - startTime) / 1000 : 0;
+        document.getElementById('listen_duration').value = duration;
+    });
+    
+    // Show skip reason only for low ratings
+    document.querySelectorAll('input[name="rating"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            const rating = parseInt(this.value);
+            const skipReasonField = document.getElementById('skip_reason').parentNode;
+            
+            if (rating <= 2) {
+                skipReasonField.style.display = 'block';
+            } else {
+                skipReasonField.style.display = 'none';
+                document.getElementById('skip_reason').value = 'Not applicable';
+            }
+        });
+    });
+    
+    // Hide skip reason by default
+    document.getElementById('skip_reason').parentNode.style.display = 'none';
+</script>
+{% endblock %}

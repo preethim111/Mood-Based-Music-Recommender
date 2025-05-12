@@ -1,0 +1,610 @@
+{
+  "user_id": "user_20250511190917_2520",
+  "user_name": null,
+  "last_updated": "2025-05-11T19:16:35.719320",
+  "history": [
+    {
+      "session_id": "session_20250511191512_3469",
+      "data": {
+        "timestamp": "2025-05-11T19:15:12.086012",
+        "text_input": "I'm feeling energetic and motivated! Need some high-tempo electronic or hip-hop tracks with strong beats for my intensive workout session. I love artists like Run The Jewels, Daft Punk, and Kendrick Lamar. Please avoid slow ballads and country music. I'll be at the gym in the morning and need something that keeps my energy levels high for about an hour. Would prefer recommendations that are fairly similar to ensure they maintain the right energy level throughout my workout.",
+        "additional_context": {
+          "artists": [
+            "Drake",
+            "Kendrick Lemar"
+          ],
+          "activity": "Exercising",
+          "environment": "Outdoors",
+          "time_of_day": "Morning",
+          "diversity": 0.8,
+          "playlist_size": 10
+        },
+        "recommendations": [
+          {
+            "video_id": "a_DuSbMvOQs",
+            "title": "Victoria Mon\u00e9t - Party Girls (Official Video) ft. Buju Banton",
+            "artist": "VictoriaMon\u00e9tVEVO",
+            "match_score": 0.5130349573753554,
+            "genre": "Pop",
+            "views": 7212253,
+            "recommendation_method": "text",
+            "youtube_url": "https://www.youtube.com/watch?v=a_DuSbMvOQs",
+            "embed_url": "https://www.youtube.com/embed/a_DuSbMvOQs"
+          },
+          {
+            "video_id": "wy4YX7EEd0k",
+            "title": "JHelix -  \"Breathe\" (Official Video)",
+            "artist": "JHelix",
+            "genre": "Unknown",
+            "views": 35582,
+            "recommendation_method": "random",
+            "youtube_url": "https://www.youtube.com/watch?v=wy4YX7EEd0k",
+            "embed_url": "https://www.youtube.com/embed/wy4YX7EEd0k"
+          },
+          {
+            "video_id": "rJWdfDPZ9Ck",
+            "title": "Libianca - People (Official Video)",
+            "artist": "LibiancaVEVO",
+            "genre": "Pop",
+            "views": 383743060,
+            "recommendation_method": "random",
+            "youtube_url": "https://www.youtube.com/watch?v=rJWdfDPZ9Ck",
+            "embed_url": "https://www.youtube.com/embed/rJWdfDPZ9Ck"
+          },
+          {
+            "video_id": "JGwWNGJdvx8",
+            "title": "Ed Sheeran - Shape of You (Official Music Video)",
+            "artist": "Ed Sheeran",
+            "views": 6462683203,
+            "genre": "Unknown",
+            "recommendation_method": "popular",
+            "youtube_url": "https://www.youtube.com/watch?v=JGwWNGJdvx8",
+            "embed_url": "https://www.youtube.com/embed/JGwWNGJdvx8"
+          },
+          {
+            "video_id": "OPf0YbXqDm0",
+            "title": "Mark Ronson - Uptown Funk (Official Video) ft. Bruno Mars",
+            "artist": "MarkRonsonVEVO",
+            "views": 5561554065,
+            "genre": "Pop",
+            "recommendation_method": "popular",
+            "youtube_url": "https://www.youtube.com/watch?v=OPf0YbXqDm0",
+            "embed_url": "https://www.youtube.com/embed/OPf0YbXqDm0",
+            "user_rating": 3
+          },
+          {
+            "video_id": "6xMBmvevhj0",
+            "title": "Calvin Harris - Nuh Ready Nuh Ready (Official Video) ft. PARTYNEXTDOOR",
+            "artist": "CalvinHarrisVEVO",
+            "match_score": 0.44151875622164494,
+            "genre": "Pop",
+            "views": 7925188,
+            "recommendation_method": "text",
+            "youtube_url": "https://www.youtube.com/watch?v=6xMBmvevhj0",
+            "embed_url": "https://www.youtube.com/embed/6xMBmvevhj0"
+          },
+          {
+            "video_id": "xnumI3_qt-w",
+            "title": "Ciara, Chris Brown - How We Roll (Official Music Video)",
+            "artist": "CiaraVEVO",
+            "match_score": 0.4410620436941497,
+            "genre": "Pop",
+            "views": 71127769,
+            "recommendation_method": "text",
+            "youtube_url": "https://www.youtube.com/watch?v=xnumI3_qt-w",
+            "embed_url": "https://www.youtube.com/embed/xnumI3_qt-w"
+          },
+          {
+            "video_id": "hLDQ88vAhIs",
+            "title": "Burna Boy - City Boys [Official Music Video]",
+            "artist": "Burna Boy",
+            "match_score": 0.4377324975468993,
+            "genre": "Unknown",
+            "views": 93173437,
+            "recommendation_method": "text",
+            "youtube_url": "https://www.youtube.com/watch?v=hLDQ88vAhIs",
+            "embed_url": "https://www.youtube.com/embed/hLDQ88vAhIs"
+          },
+          {
+            "video_id": "aSkFygPCTwE",
+            "title": "Kid Rock - All Summer Long [Official Music Video]",
+            "artist": "Kid Rock",
+            "match_score": 0.41648285817923647,
+            "genre": "Rock",
+            "views": 148917037,
+            "recommendation_method": "text",
+            "youtube_url": "https://www.youtube.com/watch?v=aSkFygPCTwE",
+            "embed_url": "https://www.youtube.com/embed/aSkFygPCTwE"
+          },
+          {
+            "video_id": "kmpyfDF_pes",
+            "title": "Bleachers - Tiny Moves (Official)",
+            "artist": "BleachersVEVO",
+            "match_score": 0.40196437120155276,
+            "genre": "Pop",
+            "views": 3510268,
+            "recommendation_method": "text",
+            "youtube_url": "https://www.youtube.com/watch?v=kmpyfDF_pes",
+            "embed_url": "https://www.youtube.com/embed/kmpyfDF_pes"
+          },
+          {
+            "video_id": "f4sdG5frA0Q",
+            "title": "Brooks & Dunn - Neon Moon (iTunes Originals)",
+            "artist": "BrooksandDunnVEVO",
+            "genre": "Pop",
+            "views": 4094682,
+            "recommendation_method": "random",
+            "youtube_url": "https://www.youtube.com/watch?v=f4sdG5frA0Q",
+            "embed_url": "https://www.youtube.com/embed/f4sdG5frA0Q"
+          },
+          {
+            "video_id": "e-fA-gBCkj0",
+            "title": "Bruno Mars - Locked Out Of Heaven (Official Music Video)",
+            "artist": "Bruno Mars",
+            "genre": "Unknown",
+            "views": 1150611320,
+            "recommendation_method": "random",
+            "youtube_url": "https://www.youtube.com/watch?v=e-fA-gBCkj0",
+            "embed_url": "https://www.youtube.com/embed/e-fA-gBCkj0"
+          },
+          {
+            "video_id": "1JltlSJH5bY",
+            "title": "Tems - Me & U (Official Video)",
+            "artist": "TemsVEVO",
+            "match_score": 0.4032979270147885,
+            "genre": "Pop",
+            "views": 65289556,
+            "youtube_url": "https://www.youtube.com/watch?v=1JltlSJH5bY",
+            "embed_url": "https://www.youtube.com/embed/1JltlSJH5bY"
+          },
+          {
+            "video_id": "CbxuXq_981s",
+            "title": "Florida Georgia Line - This Is How We Roll ft. Luke Bryan",
+            "artist": "FlaGeorgiaLineVEVO",
+            "match_score": 0.3963456138015514,
+            "genre": "Pop",
+            "views": 271925958,
+            "youtube_url": "https://www.youtube.com/watch?v=CbxuXq_981s",
+            "embed_url": "https://www.youtube.com/embed/CbxuXq_981s"
+          },
+          {
+            "video_id": "KdJ-Qwu3y4Y",
+            "title": "Victoria Mon\u00e9t - On My Mama (Official Video)",
+            "artist": "VictoriaMon\u00e9tVEVO",
+            "match_score": 0.3836206166459841,
+            "genre": "Pop",
+            "views": 92356854,
+            "youtube_url": "https://www.youtube.com/watch?v=KdJ-Qwu3y4Y",
+            "embed_url": "https://www.youtube.com/embed/KdJ-Qwu3y4Y"
+          },
+          {
+            "video_id": "LuKm4L9ryB0",
+            "title": "Travis Scott - MELTDOWN (Official Audio) ft. Drake",
+            "artist": "TravisScottVEVO",
+            "match_score": 0.36225384634666746,
+            "genre": "Pop",
+            "views": 19292504,
+            "youtube_url": "https://www.youtube.com/watch?v=LuKm4L9ryB0",
+            "embed_url": "https://www.youtube.com/embed/LuKm4L9ryB0",
+            "user_rating": 5
+          },
+          {
+            "video_id": "4C9i8E05bgI",
+            "title": "Kings Of Leon - Nowhere to Run (Official Video)",
+            "artist": "kingsofleonVEVO",
+            "match_score": 0.35651106963604473,
+            "genre": "Pop",
+            "views": 1281897,
+            "youtube_url": "https://www.youtube.com/watch?v=4C9i8E05bgI",
+            "embed_url": "https://www.youtube.com/embed/4C9i8E05bgI"
+          },
+          {
+            "video_id": "IXJTaHySW8I",
+            "title": "Real Boston Richey - Help Me (Official Music Video)",
+            "artist": "RealBostonRicheyVEVO",
+            "match_score": 0.35958383606085725,
+            "genre": "Pop",
+            "views": 52057063,
+            "youtube_url": "https://www.youtube.com/watch?v=IXJTaHySW8I",
+            "embed_url": "https://www.youtube.com/embed/IXJTaHySW8I"
+          },
+          {
+            "video_id": "o09Q-CGU6iA",
+            "title": "Rick Ross, Meek Mill - SHAQ & KOBE (Official Music Video)",
+            "artist": "RickRossVEVO",
+            "match_score": 0.35708776747933063,
+            "genre": "Pop",
+            "views": 33415207,
+            "youtube_url": "https://www.youtube.com/watch?v=o09Q-CGU6iA",
+            "embed_url": "https://www.youtube.com/embed/o09Q-CGU6iA"
+          },
+          {
+            "video_id": "ZwoDYJWWXW0",
+            "title": "Alan Walker, Keala Settle & The Greatest Showman Ensemble - This Is Me (Alan Walker Relift)",
+            "artist": "Alan Walker",
+            "match_score": 0.35405626339127666,
+            "genre": "Unknown",
+            "views": 18484004,
+            "youtube_url": "https://www.youtube.com/watch?v=ZwoDYJWWXW0",
+            "embed_url": "https://www.youtube.com/embed/ZwoDYJWWXW0"
+          },
+          {
+            "video_id": "09R8_2nJtjg",
+            "title": "Maroon 5 - Sugar (Official Music Video)",
+            "artist": "Maroon5VEVO",
+            "genre": "Pop",
+            "views": 4232192352,
+            "recommendation_method": "genre_mix",
+            "youtube_url": "https://www.youtube.com/watch?v=09R8_2nJtjg",
+            "embed_url": "https://www.youtube.com/embed/09R8_2nJtjg",
+            "user_rating": 5
+          },
+          {
+            "video_id": "4SvZIsYffNk",
+            "title": "Ciara, Lil Baby - Forever",
+            "artist": "CiaraVEVO",
+            "match_score": 0.4133926110818007,
+            "genre": "Pop",
+            "views": 8604956,
+            "youtube_url": "https://www.youtube.com/watch?v=4SvZIsYffNk",
+            "embed_url": "https://www.youtube.com/embed/4SvZIsYffNk"
+          },
+          {
+            "video_id": "6JCLY0Rlx6Q",
+            "title": "WALK THE MOON - Shut Up and Dance (Official Video)",
+            "artist": "WalkTheMoonVEVO",
+            "match_score": 0.3643375002031193,
+            "genre": "Pop",
+            "views": 462145223,
+            "youtube_url": "https://www.youtube.com/watch?v=6JCLY0Rlx6Q",
+            "embed_url": "https://www.youtube.com/embed/6JCLY0Rlx6Q"
+          },
+          {
+            "video_id": "b8lPeWRBLvE",
+            "title": "The Blessed Madonna & Kylie Minogue - Edge Of Saturday Night (Official Video)",
+            "artist": "Kylie Minogue",
+            "match_score": 0.36167821745398976,
+            "genre": "Unknown",
+            "views": 1674292,
+            "youtube_url": "https://www.youtube.com/watch?v=b8lPeWRBLvE",
+            "embed_url": "https://www.youtube.com/embed/b8lPeWRBLvE"
+          },
+          {
+            "video_id": "KHpNj3K2o7E",
+            "title": "Rose Cora Perry & The Truth Untold: The Cure (2024 Music Video)",
+            "artist": "Rose Cora Perry",
+            "match_score": 0.3483036466029081,
+            "genre": "Unknown",
+            "views": 90114,
+            "youtube_url": "https://www.youtube.com/watch?v=KHpNj3K2o7E",
+            "embed_url": "https://www.youtube.com/embed/KHpNj3K2o7E"
+          },
+          {
+            "video_id": "UrIiLvg58SY",
+            "title": "Extreme - More Than Words (Official Music Video)",
+            "artist": "ExtremeVEVO",
+            "genre": "Pop",
+            "views": 812194273,
+            "recommendation_method": "random",
+            "youtube_url": "https://www.youtube.com/watch?v=UrIiLvg58SY",
+            "embed_url": "https://www.youtube.com/embed/UrIiLvg58SY"
+          },
+          {
+            "video_id": "_Cu9Df_9Zvg",
+            "title": "Central Cee & 21 Savage - GBP (Official Music Video)",
+            "artist": "Lyrical Lemonade",
+            "genre": "Unknown",
+            "views": 25017429,
+            "recommendation_method": "random",
+            "youtube_url": "https://www.youtube.com/watch?v=_Cu9Df_9Zvg",
+            "embed_url": "https://www.youtube.com/embed/_Cu9Df_9Zvg"
+          }
+        ],
+        "feedback": {
+          "OPf0YbXqDm0": {
+            "timestamp": "2025-05-11T19:16:12.573989",
+            "video_id": "OPf0YbXqDm0",
+            "rating": 3,
+            "skip_reason": null,
+            "listen_duration": 2.69,
+            "video_data": {
+              "video_id": "OPf0YbXqDm0",
+              "title": "Mark Ronson - Uptown Funk (Official Video) ft. Bruno Mars",
+              "artist": "MarkRonsonVEVO",
+              "views": 5561554065,
+              "genre": "Pop",
+              "recommendation_method": "popular",
+              "youtube_url": "https://www.youtube.com/watch?v=OPf0YbXqDm0",
+              "embed_url": "https://www.youtube.com/embed/OPf0YbXqDm0",
+              "user_rating": 3
+            },
+            "session_id": "session_20250511191512_3469"
+          },
+          "LuKm4L9ryB0": {
+            "timestamp": "2025-05-11T19:16:23.011894",
+            "video_id": "LuKm4L9ryB0",
+            "rating": 5,
+            "skip_reason": null,
+            "listen_duration": 2.456,
+            "video_data": {
+              "video_id": "LuKm4L9ryB0",
+              "title": "Travis Scott - MELTDOWN (Official Audio) ft. Drake",
+              "artist": "TravisScottVEVO",
+              "match_score": 0.36225384634666746,
+              "genre": "Pop",
+              "views": 19292504,
+              "youtube_url": "https://www.youtube.com/watch?v=LuKm4L9ryB0",
+              "embed_url": "https://www.youtube.com/embed/LuKm4L9ryB0",
+              "user_rating": 5
+            },
+            "session_id": "session_20250511191512_3469"
+          },
+          "09R8_2nJtjg": {
+            "timestamp": "2025-05-11T19:16:33.107169",
+            "video_id": "09R8_2nJtjg",
+            "rating": 5,
+            "skip_reason": null,
+            "listen_duration": 2.311,
+            "video_data": {
+              "video_id": "09R8_2nJtjg",
+              "title": "Maroon 5 - Sugar (Official Music Video)",
+              "artist": "Maroon5VEVO",
+              "genre": "Pop",
+              "views": 4232192352,
+              "recommendation_method": "genre_mix",
+              "youtube_url": "https://www.youtube.com/watch?v=09R8_2nJtjg",
+              "embed_url": "https://www.youtube.com/embed/09R8_2nJtjg",
+              "user_rating": 5
+            },
+            "session_id": "session_20250511191512_3469"
+          }
+        },
+        "completed": false
+      }
+    }
+  ],
+  "preferences": {
+    "favorite_genres": {
+      "Pop": 2.0
+    },
+    "favorite_moods": {},
+    "favorite_activities": {},
+    "disliked_genres": {},
+    "preferred_eras": {},
+    "favorite_artists": {
+      "MarkRonsonVEVO": 0.15000000000000002,
+      "TravisScottVEVO": 1.5,
+      "Maroon5VEVO": 1.5
+    },
+    "playlists": [
+      {
+        "playlist_id": "playlist_20250511191635_4787",
+        "data": {
+          "name": "Your Pop Favorites",
+          "description": "A personalized playlist based on your listening history and preferences.",
+          "created_at": "2025-05-11T19:16:35.719245",
+          "size": 18,
+          "tracks": [
+            {
+              "video_id": "LBr7kECsjcQ",
+              "title": "Fall Out Boy - Centuries (Official Video)",
+              "artist": "FallOutBoyVEVO",
+              "similarity": 0.5702115297317505,
+              "genre": "Pop",
+              "views": 478360372
+            },
+            {
+              "video_id": "fRh_vgS2dFE",
+              "title": "Justin Bieber - Sorry (PURPOSE : The Movement)",
+              "artist": "JustinBieberVEVO",
+              "similarity": 0.5754702687263489,
+              "genre": "Pop",
+              "views": 3960627064
+            },
+            {
+              "video_id": "09R8_2nJtjg",
+              "title": "Maroon 5 - Sugar (Official Music Video)",
+              "artist": "Maroon5VEVO",
+              "genre": "Pop",
+              "views": 4232192352,
+              "recommendation_method": "genre_mix",
+              "youtube_url": "https://www.youtube.com/watch?v=09R8_2nJtjg",
+              "embed_url": "https://www.youtube.com/embed/09R8_2nJtjg",
+              "user_rating": 5
+            },
+            {
+              "video_id": "LuKm4L9ryB0",
+              "title": "Travis Scott - MELTDOWN (Official Audio) ft. Drake",
+              "artist": "TravisScottVEVO",
+              "match_score": 0.36225384634666746,
+              "genre": "Pop",
+              "views": 19292504,
+              "youtube_url": "https://www.youtube.com/watch?v=LuKm4L9ryB0",
+              "embed_url": "https://www.youtube.com/embed/LuKm4L9ryB0",
+              "user_rating": 5
+            },
+            {
+              "video_id": "UqyT8IEBkvY",
+              "title": "Bruno Mars - 24K Magic (Official Music Video)",
+              "artist": "Bruno Mars",
+              "similarity": 0.6731319427490234,
+              "genre": "Unknown",
+              "views": 1723052347
+            },
+            {
+              "video_id": "pSY3i5XHHXo",
+              "title": "Central Cee x Dave - Sprinter [Music Video]",
+              "artist": "Central Cee",
+              "similarity": 0.619453489780426,
+              "genre": "Unknown",
+              "views": 294899858
+            },
+            {
+              "video_id": "OMOGaugKpzs",
+              "title": "The Police - Every Breath You Take (Official Music Video)",
+              "artist": "ThePoliceVEVO",
+              "similarity": 0.6196730732917786,
+              "genre": "Pop",
+              "views": 1415294499
+            },
+            {
+              "video_id": "PMivT7MJ41M",
+              "title": "Bruno Mars - That\u2019s What I Like [Official Music Video]",
+              "artist": "Bruno Mars",
+              "similarity": 0.7040470242500305,
+              "genre": "Unknown",
+              "views": 2404667946
+            },
+            {
+              "video_id": "OPf0YbXqDm0",
+              "title": "Mark Ronson - Uptown Funk (Official Video) ft. Bruno Mars",
+              "artist": "MarkRonsonVEVO",
+              "views": 5561554065,
+              "genre": "Pop",
+              "recommendation_method": "popular",
+              "youtube_url": "https://www.youtube.com/watch?v=OPf0YbXqDm0",
+              "embed_url": "https://www.youtube.com/embed/OPf0YbXqDm0",
+              "user_rating": 3
+            },
+            {
+              "video_id": "tGTKY1dpo_E",
+              "title": "Young Thug - Oh U Went (feat. Drake) [Official Video]",
+              "artist": "Young Thug",
+              "similarity": 0.6271907687187195,
+              "genre": "Unknown",
+              "views": 23733747
+            },
+            {
+              "video_id": "8ekJMC8OtGU",
+              "title": "Drake - NOKIA (Official Music Video)",
+              "artist": "DrakeVEVO",
+              "similarity": 0.6229508519172668,
+              "genre": "Pop",
+              "views": 18969536
+            },
+            {
+              "video_id": "viAk4pUCzSs",
+              "title": "Offset x Gunna - Style Rare",
+              "artist": "OFFSETYRN",
+              "similarity": 0.6161906719207764,
+              "genre": "Unknown",
+              "views": 7288804
+            },
+            {
+              "video_id": "k2qgadSvNyU",
+              "title": "Dua Lipa - New Rules (Official Music Video)",
+              "artist": "Dua Lipa",
+              "similarity": 0.5872390270233154,
+              "genre": "Unknown",
+              "views": 3139178452
+            },
+            {
+              "video_id": "Q0oIoR9mLwc",
+              "title": "Red Hot Chili Peppers - Dark Necessities [Official Music Video]",
+              "artist": "Red Hot Chili Peppers",
+              "similarity": 0.5881041288375854,
+              "genre": "Unknown",
+              "views": 513246923
+            },
+            {
+              "video_id": "e-fA-gBCkj0",
+              "title": "Bruno Mars - Locked Out Of Heaven (Official Music Video)",
+              "artist": "Bruno Mars",
+              "similarity": 0.6223593354225159,
+              "genre": "Unknown",
+              "views": 1150611320
+            },
+            {
+              "video_id": "fLexgOxsZu0",
+              "title": "Bruno Mars - The Lazy Song (Official Music Video)",
+              "artist": "Bruno Mars",
+              "similarity": 0.650157630443573,
+              "genre": "Unknown",
+              "views": 3006259030
+            },
+            {
+              "video_id": "I0fgkcTbBoI",
+              "title": "Future, Metro Boomin, Travis Scott, Playboi Carti - Type Shit (Official Video)",
+              "artist": "FutureVEVO",
+              "similarity": 0.6462389230728149,
+              "genre": "Pop",
+              "views": 111813041
+            },
+            {
+              "video_id": "hUE6Haw_3zg",
+              "title": "Sexyy Red \"Get It Sexyy\" (Official Video)",
+              "artist": "Sexyy Red",
+              "similarity": 0.5689653754234314,
+              "genre": "Unknown",
+              "views": 16506344
+            }
+          ],
+          "genre_distribution": {
+            "Pop": 1.0
+          },
+          "direct_picks": 3,
+          "method": "feedback_based"
+        }
+      }
+    ]
+  },
+  "feedback": [
+    {
+      "timestamp": "2025-05-11T19:16:12.573989",
+      "video_id": "OPf0YbXqDm0",
+      "rating": 3,
+      "skip_reason": null,
+      "listen_duration": 2.69,
+      "video_data": {
+        "video_id": "OPf0YbXqDm0",
+        "title": "Mark Ronson - Uptown Funk (Official Video) ft. Bruno Mars",
+        "artist": "MarkRonsonVEVO",
+        "views": 5561554065,
+        "genre": "Pop",
+        "recommendation_method": "popular",
+        "youtube_url": "https://www.youtube.com/watch?v=OPf0YbXqDm0",
+        "embed_url": "https://www.youtube.com/embed/OPf0YbXqDm0",
+        "user_rating": 3
+      },
+      "session_id": "session_20250511191512_3469"
+    },
+    {
+      "timestamp": "2025-05-11T19:16:23.011894",
+      "video_id": "LuKm4L9ryB0",
+      "rating": 5,
+      "skip_reason": null,
+      "listen_duration": 2.456,
+      "video_data": {
+        "video_id": "LuKm4L9ryB0",
+        "title": "Travis Scott - MELTDOWN (Official Audio) ft. Drake",
+        "artist": "TravisScottVEVO",
+        "match_score": 0.36225384634666746,
+        "genre": "Pop",
+        "views": 19292504,
+        "youtube_url": "https://www.youtube.com/watch?v=LuKm4L9ryB0",
+        "embed_url": "https://www.youtube.com/embed/LuKm4L9ryB0",
+        "user_rating": 5
+      },
+      "session_id": "session_20250511191512_3469"
+    },
+    {
+      "timestamp": "2025-05-11T19:16:33.107169",
+      "video_id": "09R8_2nJtjg",
+      "rating": 5,
+      "skip_reason": null,
+      "listen_duration": 2.311,
+      "video_data": {
+        "video_id": "09R8_2nJtjg",
+        "title": "Maroon 5 - Sugar (Official Music Video)",
+        "artist": "Maroon5VEVO",
+        "genre": "Pop",
+        "views": 4232192352,
+        "recommendation_method": "genre_mix",
+        "youtube_url": "https://www.youtube.com/watch?v=09R8_2nJtjg",
+        "embed_url": "https://www.youtube.com/embed/09R8_2nJtjg",
+        "user_rating": 5
+      },
+      "session_id": "session_20250511191512_3469"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}MoodTunes - New Recommendations{% endblock %}
+
+{% block content %}
+<div class="header">
+    <h1>Get Music Recommendations</h1>
+    <p class="lead">Tell us how you're feeling or what you're doing</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-body">
+                <form method="post" action="{{ url_for('new_recommendations') }}">
+                    {% for section in form.sections %}
+                    <div class="mb-4">
+                        <h4>{{ section.title }}</h4>
+                        {% if section.description %}
+                        <p class="text-muted">{{ section.description }}</p>
+                        {% endif %}
+                        
+                        {% for field in section.fields %}
+                        <div class="mb-3">
+                            <label for="{{ field.id }}" class="form-label">{{ field.label }}</label>
+                            
+                            {% if field.type == 'text_area' %}
+                            <textarea class="form-control" id="{{ field.id }}" name="{{ field.id }}" 
+                                     rows="4" placeholder="{{ field.placeholder }}"
+                                     {% if field.required %}required{% endif %}
+                                     {% if field.min_length %}minlength="{{ field.min_length }}"{% endif %}
+                                     {% if field.max_length %}maxlength="{{ field.max_length }}"{% endif %}></textarea>
+                            
+                            {% elif field.type == 'text' %}
+                            <input type="text" class="form-control" id="{{ field.id }}" name="{{ field.id }}" 
+                                   placeholder="{{ field.placeholder }}"
+                                   {% if field.required %}required{% endif %}>
+                            
+                            {% elif field.type == 'select' %}
+                            <select class="form-select" id="{{ field.id }}" name="{{ field.id }}"
+                                   {% if field.required %}required{% endif %}>
+                                <option value="" selected disabled>Select an option</option>
+                                {% for option in field.options %}
+                                <option value="{{ option }}" {% if field.default == option %}selected{% endif %}>
+                                    {{ option }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                            
+                            {% elif field.type == 'multi_select' %}
+                            <select class="form-select" id="{{ field.id }}" name="{{ field.id }}" 
+                                   multiple size="5"
+                                   {% if field.required %}required{% endif %}>
+                                {% for option in field.options %}
+                                <option value="{{ option }}">{{ option }}</option>
+                                {% endfor %}
+                            </select>
+                            {% if field.max_selections %}
+                            <div class="form-text">Select up to {{ field.max_selections }} options</div>
+                            {% endif %}
+                            
+                            {% elif field.type == 'slider' %}
+                            <div class="range-container">
+                                <input type="range" class="form-range" min="{{ field.min }}" max="{{ field.max }}"
+                                      id="{{ field.id }}" name="{{ field.id }}" value="{{ field.default }}">
+                                <div class="d-flex justify-content-between">
+                                    <span>Similar</span>
+                                    <span>Diverse</span>
+                                </div>
+                            </div>
+                            {% if field.help_text %}
+                            <div class="form-text">{{ field.help_text }}</div>
+                            {% endif %}
+                            
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-magic me-2"></i>Generate Recommendations
+                        </button>
+                        <button type="reset" class="btn btn-outline-secondary">
+                            <i class="fas fa-undo me-2"></i>Reset Form
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

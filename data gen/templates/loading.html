@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}MoodTunes - Loading{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body text-center py-5">
+        <h3>System Initializing</h3>
+        <p>{{ loading.status }}</p>
+        <div class="progress mb-3">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                 role="progressbar" 
+                 style="width: {{ loading.progress }}%" 
+                 aria-valuenow="{{ loading.progress }}" 
+                 aria-valuemin="0" 
+                 aria-valuemax="100">
+                {{ loading.progress }}%
+            </div>
+        </div>
+        <p>Please wait while we load the recommendation system...</p>
+        <div class="spinner-border text-primary mt-3" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Check loading status periodically
+    function checkStatus() {
+        fetch('/api/status')
+            .then(response => response.json())
+            .then(data => {
+                if (!data.is_loading) {
+                    // Redirect when loading is complete
+                    window.location.href = "{{ redirect_url }}";
+                } else {
+                    // Update the loading status
+                    document.querySelector('.progress-bar').style.width = data.progress + '%';
+                    document.querySelector('.progress-bar').setAttribute('aria-valuenow', data.progress);
+                    document.querySelector('.progress-bar').textContent = data.progress + '%';
+                    document.querySelector('p').textContent = data.status;
+                    
+                    // Check again in 2 seconds
+                    setTimeout(checkStatus, 2000);
+                }
+            });
+    }
+    
+    // Start checking status
+    setTimeout(checkStatus, 2000);
+</script>
+{% endblock %}

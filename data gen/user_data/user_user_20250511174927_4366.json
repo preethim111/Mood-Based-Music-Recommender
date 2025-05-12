@@ -1,0 +1,228 @@
+{
+  "user_id": "user_20250511174927_4366",
+  "user_name": null,
+  "last_updated": "2025-05-11T17:52:49.347264",
+  "history": [
+    {
+      "session_id": "session_20250511175001_1206",
+      "data": {
+        "timestamp": "2025-05-11T17:50:01.581819",
+        "text_input": "I'm feeling nostalgic today and want to revisit the sound of 80s and 90s rock and pop. I love bands like Queen, Fleetwood Mac, and Michael Jackson. Would prefer to avoid current mainstream pop and trap music. I'll be driving on a road trip during the afternoon and want something I can sing along to that brings back memories.",
+        "additional_context": {
+          "artists": [
+            ""
+          ],
+          "activity": "Driving",
+          "environment": "Work",
+          "time_of_day": "Morning",
+          "diversity": 0.4,
+          "playlist_size": 10
+        },
+        "recommendations": [
+          {
+            "video_id": "aSkFygPCTwE",
+            "title": "Kid Rock - All Summer Long [Official Music Video]",
+            "artist": "Kid Rock",
+            "match_score": 0.5663583202344428,
+            "genre": "Rock",
+            "views": 148917037,
+            "recommendation_method": "text",
+            "youtube_url": "https://www.youtube.com/watch?v=aSkFygPCTwE",
+            "embed_url": "https://www.youtube.com/embed/aSkFygPCTwE"
+          },
+          {
+            "video_id": "IUmnTfsY3hI",
+            "title": "John Denver - Take Me Home, Country Roads (from The Wildlife Concert)",
+            "artist": "JohnDenverVEVO",
+            "match_score": 0.5540967819833744,
+            "genre": "Pop",
+            "views": 81298584,
+            "recommendation_method": "text",
+            "youtube_url": "https://www.youtube.com/watch?v=IUmnTfsY3hI",
+            "embed_url": "https://www.youtube.com/embed/IUmnTfsY3hI"
+          },
+          {
+            "video_id": "AEjRV6vsPFM",
+            "title": "Alex Kirsch - Feelings For You",
+            "artist": "Vibe. Records",
+            "genre": "Unknown",
+            "views": 3155216,
+            "recommendation_method": "random",
+            "youtube_url": "https://www.youtube.com/watch?v=AEjRV6vsPFM",
+            "embed_url": "https://www.youtube.com/embed/AEjRV6vsPFM"
+          },
+          {
+            "video_id": "1UUYjd2rjsE",
+            "title": "Scorpions - Send Me An Angel",
+            "artist": "ScorpionsVEVO",
+            "genre": "Pop",
+            "views": 418699709,
+            "recommendation_method": "random",
+            "youtube_url": "https://www.youtube.com/watch?v=1UUYjd2rjsE",
+            "embed_url": "https://www.youtube.com/embed/1UUYjd2rjsE"
+          },
+          {
+            "video_id": "JGwWNGJdvx8",
+            "title": "Ed Sheeran - Shape of You (Official Music Video)",
+            "artist": "Ed Sheeran",
+            "views": 6462683203,
+            "genre": "Unknown",
+            "recommendation_method": "popular",
+            "youtube_url": "https://www.youtube.com/watch?v=JGwWNGJdvx8",
+            "embed_url": "https://www.youtube.com/embed/JGwWNGJdvx8"
+          },
+          {
+            "video_id": "OPf0YbXqDm0",
+            "title": "Mark Ronson - Uptown Funk (Official Video) ft. Bruno Mars",
+            "artist": "MarkRonsonVEVO",
+            "views": 5561554065,
+            "genre": "Pop",
+            "recommendation_method": "popular",
+            "youtube_url": "https://www.youtube.com/watch?v=OPf0YbXqDm0",
+            "embed_url": "https://www.youtube.com/embed/OPf0YbXqDm0"
+          },
+          {
+            "video_id": "f4sdG5frA0Q",
+            "title": "Brooks & Dunn - Neon Moon (iTunes Originals)",
+            "artist": "BrooksandDunnVEVO",
+            "match_score": 0.4922478298407399,
+            "genre": "Pop",
+            "views": 4094682,
+            "recommendation_method": "text",
+            "youtube_url": "https://www.youtube.com/watch?v=f4sdG5frA0Q",
+            "embed_url": "https://www.youtube.com/embed/f4sdG5frA0Q"
+          },
+          {
+            "video_id": "dX8orLrVwtY",
+            "title": "Sonny Fodera, Jazzy, D.O.D - Somedays [Official Music Video]",
+            "artist": "Sonny Fodera",
+            "match_score": 0.4879631257113471,
+            "genre": "Unknown",
+            "views": 21378489,
+            "recommendation_method": "text",
+            "youtube_url": "https://www.youtube.com/watch?v=dX8orLrVwtY",
+            "embed_url": "https://www.youtube.com/embed/dX8orLrVwtY"
+          },
+          {
+            "video_id": "IpT-FW_G8-A",
+            "title": "Shania Twain - Forever And For Always (Red Version) (Official Music Video)",
+            "artist": "ShaniaTwainVEVO",
+            "match_score": 0.47439734573067094,
+            "genre": "Pop",
+            "views": 149672950,
+            "recommendation_method": "text",
+            "youtube_url": "https://www.youtube.com/watch?v=IpT-FW_G8-A",
+            "embed_url": "https://www.youtube.com/embed/IpT-FW_G8-A"
+          },
+          {
+            "video_id": "HyrWd_gfQNQ",
+            "title": "Metallica - Nothing Else Matters (Official Music Video)",
+            "artist": "Warner Records Vault",
+            "match_score": 0.4667696959240304,
+            "genre": "Unknown",
+            "views": 43115830,
+            "recommendation_method": "text",
+            "youtube_url": "https://www.youtube.com/watch?v=HyrWd_gfQNQ",
+            "embed_url": "https://www.youtube.com/embed/HyrWd_gfQNQ"
+          }
+        ],
+        "feedback": {},
+        "completed": false
+      }
+    },
+    {
+      "session_id": "session_20250511175249_4475",
+      "data": {
+        "timestamp": "2025-05-11T17:52:49.112862",
+        "text_input": "I broke up with my girlfriend, so i am very sad, need to vibe to some songs",
+        "additional_context": {
+          "genres": "Pop",
+          "disliked_genres": "Hip-Hop",
+          "artists": [
+            "Lana Del Ray"
+          ],
+          "activity": "Relaxing",
+          "environment": "Gym",
+          "time_of_day": "Late night",
+          "diversity": 0.7,
+          "playlist_size": 10
+        },
+        "recommendations": [
+          {
+            "video_id": "Ip6cw8gfHHI",
+            "title": "d4vd - Here With Me [Official Music Video]",
+            "artist": "d4vdVEVO",
+            "match_score": 0.516344282168709,
+            "genre": "Pop",
+            "views": 204762209,
+            "recommendation_method": "text"
+          },
+          {
+            "video_id": "Ahha3Cqe_fk",
+            "title": "Katy Perry - The One That Got Away (Official Music Video)",
+            "artist": "KatyPerryVEVO",
+            "match_score": 0.5146565437316895,
+            "genre": "Pop",
+            "views": 1072610765,
+            "recommendation_method": "text"
+          },
+          {
+            "video_id": "GemKqzILV4w",
+            "title": "Snow Patrol - Chasing Cars (Official Video)",
+            "artist": "SnowPatrolVEVO",
+            "match_score": 0.513322907170601,
+            "genre": "Pop",
+            "views": 392260888,
+            "recommendation_method": "text"
+          },
+          {
+            "video_id": "XfMBdq5iFnw",
+            "title": "Mitski - I Bet on Losing Dogs (Official Audio)",
+            "artist": "Mitski",
+            "match_score": 0.5058618252365772,
+            "genre": "Unknown",
+            "views": 19642729,
+            "recommendation_method": "text"
+          },
+          {
+            "video_id": "L5tfpGSr7jk",
+            "title": "Alex Vaughn - So Be It [Official Music Video]",
+            "artist": "AlexVaughnVEVO",
+            "match_score": 0.5043036727622325,
+            "genre": "Pop",
+            "views": 4746129,
+            "recommendation_method": "text"
+          },
+          {
+            "video_id": "KNtJGQkC-WI",
+            "title": "Ariana Grande - we can't be friends (wait for your love) (official music video)",
+            "artist": "ArianaGrandeVevo",
+            "match_score": 0.5064041111649012,
+            "genre": "Pop",
+            "views": 270114660,
+            "recommendation_method": "text"
+          },
+          {
+            "video_id": "q0oGhx2JT1A",
+            "title": "Victoria Mon\u00e9t - Alright (Official Video)",
+            "artist": "VictoriaMon\u00e9tVEVO",
+            "genre": "Pop",
+            "views": 10501085,
+            "recommendation_method": "random"
+          }
+        ],
+        "feedback": {},
+        "completed": false
+      }
+    }
+  ],
+  "preferences": {
+    "favorite_genres": {},
+    "favorite_moods": {},
+    "favorite_activities": {},
+    "disliked_genres": {},
+    "preferred_eras": {},
+    "favorite_artists": {}
+  },
+  "feedback": []
+}
