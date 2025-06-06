@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h2>Initializing Music Recommender</h2>
+    <p>{{ status }}</p>
+    
+    <div class="progress mb-4" style="height: 20px;">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: {{ progress }}%" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    
+    <div id="loading-spinner" class="mt-4">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    
+    <p class="mt-4">This may take a few moments. Please wait...</p>
+</div>
+
+<script>
+    // Check status periodically
+    const checkStatus = () => {
+        fetch('/status')
+            .then(response => response.json())
+            .then(data => {
+                if (!data.is_loading) {
+                    window.location.href = '/';
+                }
+            });
+    };
+    
+    // Check every 2 seconds
+    setInterval(checkStatus, 2000);
+</script>
+{% endblock %}

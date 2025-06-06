@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mt-4">
+    <div class="col-md-8 offset-md-2">
+        <div class="mood-card text-center">
+            <h1 class="display-5 mb-3">How are you feeling today?</h1>
+            <p class="lead mb-4">Describe your mood, and I'll recommend music that matches it.</p>
+            
+            <form action="/recommend" method="POST">
+                <div class="mb-3">
+                    <input type="text" class="form-control form-control-lg" name="mood_text" 
+                           placeholder="e.g., 'Energetic and ready to work out' or 'Calm and need to focus'"
+                           required minlength="5">
+                </div>
+                
+                <button type="submit" class="btn btn-light btn-lg px-5">
+                    <i class="fas fa-music me-2"></i> Find Music
+                </button>
+            </form>
+        </div>
+        
+        <div class="card mt-4">
+            <div class="card-body">
+                <h3><i class="fas fa-info-circle"></i> How It Works</h3>
+                <p>Our advanced AI analyzes your mood description and matches it to songs in our database. 
+                   The more feedback you provide, the more personalized your recommendations become.</p>
+                
+                {% if feedback_count > 0 %}
+                <div class="alert alert-info">
+                    <i class="fas fa-star me-2"></i> You have provided feedback on {{ feedback_count }} songs.
+                    {% if personalization %}
+                    <strong>Your recommendations are now personalized!</strong>
+                    {% else %}
+                    Provide feedback on {{ 5 - feedback_count }} more songs to enable full personalization.
+                    {% endif %}
+                </div>
+                {% endif %}
+                
+                <h4 class="mt-4"><i class="fas fa-lightbulb"></i> Try these examples:</h4>
+                <ul>
+                    <li>"Energetic and ready to workout"</li>
+                    <li>"Calm and relaxing music for studying"</li>
+                    <li>"Nostalgic songs to reflect on memories"</li>
+                    <li>"Happy upbeat music for a party"</li>
+                    <li>"Sad songs for a rainy day"</li>
+                </ul>
+            </div>
+        </div>
+        
+        {% if feedback_count > 0 %}
+        <div class="text-center mt-4">
+            <form action="/reset_history" method="POST" onsubmit="return confirm('Are you sure you want to reset your recommendation history? This won\'t delete your feedback.');">
+                <button type="submit" class="btn btn-outline-secondary btn-sm">
+                    <i class="fas fa-redo"></i> Reset Recommendation History
+                </button>
+            </form>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
