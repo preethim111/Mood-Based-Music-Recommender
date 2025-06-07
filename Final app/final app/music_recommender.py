@@ -21,7 +21,7 @@ class EnhancedMusicRecommender:
     diversity mechanisms, and personalized recommendations.
     """
     
-    def __init__(self, music_data_path="/Users/ishaangosain/Desktop/dataset ds3/archive (10)/final app/music_data_with_clusters.csv"):
+    def __init__(self, music_data_path="/Users/preethimanne/Desktop/dataset ds3/archive (10)/final app/music_data_with_clusters.csv"):
         """
         Initialize the enhanced music recommender.
         
@@ -824,7 +824,7 @@ class EnhancedMusicRecommender:
     def create_documentation(self):
         """Create comprehensive documentation for the recommendation system"""
         # Create system info text file
-        output_dir = '/Users/ishaangosain/Desktop/dataset ds3/archive (10)/output'
+        output_dir = '/Users/preethimanne/Desktop/dataset ds3/archive (10)/output'
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
         

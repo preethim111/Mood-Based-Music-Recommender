@@ -292,7 +292,7 @@ def init_recommender():
         }
         
         # Initialize recommender with path to your dataset
-        data_path = '/Users/ishaangosain/Desktop/dataset ds3/archive (10)/final app/music_data_with_clusters.csv'
+        data_path = '/Users/preethimanne/Desktop/dataset ds3/archive (10)/final app/music_data_with_clusters.csv'
         if not os.path.exists(data_path):
             print(f"Warning: Dataset file {data_path} not found.")
             data_path = None  # Let the recommender handle the missing file
